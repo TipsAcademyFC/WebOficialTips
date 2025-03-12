@@ -517,3 +517,153 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .jugador img, .directivo img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Mobile: <768px */
+@media (max-width: 768px) {
+    /* Header Adaptable */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* Menú Hamburguesa */
+    .menu-hamburguesa {
+        display: block;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    /* Ajustes Generales */
+    main {
+        padding: 80px 15px 20px;
+    }
+    
+    .lema {
+        font-size: 1.5em;
+    }
+    
+    /* Grid Responsive */
+    .grid-jugadores, .grid-directiva {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Carrusel */
+    .slide-texto {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Mobile Pequeño: <480px */
+@media (max-width: 480px) {
+    .logo {
+        width: 60px;
+    }
+    
+    .logo-texto {
+        font-size: 1.2em;
+    }
+    
+    /* Formularios */
+    input, textarea {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+    
+    /* Tablas */
+    table {
+        font-size: 0.8em;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    /* Noticias */
+    .noticia {
+        flex-direction: column;
+    }
+    
+    .noticia-imagen {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Imágenes Responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contenedores Fluidos */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Botones y Enlaces Táctiles */
+button, a {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+/* Tipografía Escalable */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+}
+
+/* Formularios Adaptables */
+form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
