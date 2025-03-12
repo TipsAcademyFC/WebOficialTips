@@ -1,0 +1,519 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #00529b;
+    padding: 10px 20px; /* Reduce el padding superior e inferior */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el texto */
+    justify-content: space-between; /* Espacio entre el logo y los enlaces */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.logo-texto {
+    font-family: 'Arial Black', sans-serif;
+    color: #ffffff;
+    font-size: 1.8em; /* Aumenta el tamaño del texto */
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para un efecto moderno */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Main */
+main {
+    flex: 1; /* Permite que el main ocupe el espacio restante */
+    padding: 100px 20px 20px; /* Espacio superior para evitar que el contenido se superponga con la cabecera */
+    min-height: calc(100vh - 160px); /* Ajusta la altura mínima para que quepa entre la cabecera y el pie de página */
+}
+
+
+
+/* Añado estilos específicos para el nombre del club */
+.lema {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.logo-texto {
+    font-family: 'Arial Black', sans-serif;
+    color: #00529b;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+/* Carrusel */
+.carrusel {
+    position: relative;
+    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que el contenedor interno ocupe todo el ancho */
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa el 100% del ancho del carrusel */
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del slide */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Cubre el área del slide */
+}
+
+.slide-texto {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 82, 155, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Controles del carrusel */
+.carrusel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    color: #00529b;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Indicadores */
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicator.active {
+    background: #00529b;
+    transform: scale(1.2);
+}
+
+/* Header y Navegación */
+header {
+    background-color: #00529b;
+    padding: 10px 20px; /* Reduce el padding superior e inferior */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el texto */
+    justify-content: space-between; /* Espacio entre el logo y los enlaces */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.logo-texto {
+    font-family: 'Arial Black', sans-serif;
+    color: #ffffff;
+    font-size: 1.8em; /* Aumenta el tamaño del texto */
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para un efecto moderno */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.logo-texto:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Secciones */
+main {
+    padding: 100px 20px 60px;
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00529b;
+}
+
+/* Estilos específicos para cada página */
+/* Inicio */
+#inicio {
+    background: linear-gradient(rgba(0,82,155,0.9), rgba(0,82,155,0.8)),
+                url('imagenes/fondo-inicio.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.lema {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Jugadores y Junta Directiva */
+.grid-jugadores, .grid-directiva {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    justify-items: center; /* Centra las tarjetas */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seccion-directiva {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #00529b;
+}
+
+.jugador {
+    border: 2px solid #00529b;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.jugador img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.directivo {
+    border: 2px solid #00529b;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.directivo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Calendario */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #00529b;
+    text-align: center;
+}
+
+th {
+    background-color: #00529b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f3ff;
+}
+
+/* Estilo para los escudos */
+.escudo {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 5px; /* Espacio entre el escudo y el nombre del equipo */
+}
+
+/* Clasificación */
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+/* Noticias */
+.noticias-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px; /* Espacio entre noticias */
+}
+
+.noticia-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 15px;
+}
+
+.noticia h3 {
+    color: #00529b;
+}
+
+.fecha {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.noticia-imagen {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-left: 15px; /* Espacio entre la imagen y el texto */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.derecha {
+    order: 2; /* Coloca la imagen a la derecha */
+}
+
+.izquierda {
+    order: 1; /* Coloca la imagen a la izquierda */
+}
+
+/* Contacto */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00529b;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00529b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: #00529b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.redes-sociales {
+    margin: 15px 0;
+}
+
+.redes-sociales a {
+    color: #ffffff; /* Color de los iconos */
+    margin-right: 10px; /* Espacio entre los iconos */
+    font-size: 1.5em; /* Tamaño de los iconos */
+    transition: color 0.3s; /* Transición suave para el color */
+    display: inline-block; /* Asegura que los enlaces se comporten como bloques en línea */
+}
+
+.redes-sociales a:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+
+/* Asegúrate de que no haya estilos que oculten los iconos */
+.redes-sociales a i {
+    opacity: 1; /* Asegura que la opacidad sea siempre 1 */
+}
+
+/* Contacto */
+.contacto-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Añade margen superior para mover el formulario hacia abajo */
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #00529b;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00529b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003d7a; /* Color más oscuro al pasar el mouse */
+}
+
+.informacion-contacto {
+    margin-top: 30px;
+}
+
+.informacion-contacto h3 {
+    margin-bottom: 10px;
+}
+
+.informacion-contacto p {
+    margin: 5px 0;
+}
+
+.redes-sociales {
+    margin-top: 10px;
+}
+
+.redes-sociales a.imgContact {
+    color: #00529b;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .lema {
+        font-size: 1.8em;
+    }
+
+    .grid-jugadores, .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}
